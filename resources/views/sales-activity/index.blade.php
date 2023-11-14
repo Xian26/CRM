@@ -5,7 +5,7 @@
         <div class="toolbar" id="kt_toolbar">
             <div id="kt_toolbar_container" class="container-fluid d-flex flex-stack">
                 <div data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}" class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
-                    <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Menu</h1>
+                    <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Sales Activity</h1>
                     <span class="h-20px border-gray-300 border-start mx-4"></span>
                     <ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 my-1">
                         <li class="breadcrumb-item text-muted">
@@ -14,7 +14,7 @@
                         <li class="breadcrumb-item">
                             <span class="bullet bg-gray-300 w-5px h-2px"></span>
                         </li>
-                        <li class="breadcrumb-item text-dark">Menu</li>
+                        <li class="breadcrumb-item text-dark">Sales Activity</li>
                     </ul>
                 </div>
             </div>
@@ -60,7 +60,7 @@
                         </div>
 
                         <div class="card-toolbar">
-                            <a href="{{ route('menu.add') }}" class="btn btn-sm btn-light-primary">
+                            <a href="{{ route('sales-activity.add') }}" class="btn btn-sm btn-light-primary">
                                 <span class="svg-icon svg-icon-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="none">
@@ -74,7 +74,7 @@
                         </div>
                     </div>
                     <div class="card-body pt-0">
-                        <table class="table align-middle table-row-dashed fs-6 gy-5" id="menu-table">
+                        <table class="table align-middle table-row-dashed fs-6 gy-5" id="sales-activity-table">
                             <thead>
                                 <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0">
                                     <th class="min-w-10px">No</th>
@@ -101,11 +101,11 @@
                 $("div.alert").fadeOut(300, function(){ $(this).remove();});
             }, 5000);
 
-            var data_menu = $('#menu-table').DataTable({
+            var data_sales_activity = $('#sales-activity-table').DataTable({
                 processing: true,
                 serverSide: true,
                 ajax: {
-                    url: "{{ route('menu.getData') }}",
+                    url: "{{ route('sales-activity.getData') }}",
                     dataType: "JSON",
                     type: "GET",
                     data:function(d){
@@ -151,7 +151,7 @@
                     if (result.isConfirmed) {
                         $.ajax({
                             type: "POST",
-                            url: "{{ route('menu.delete') }}",
+                            url: "{{ route('sales-activity.delete') }}",
                             data: ({
                                 "_token": "{{ csrf_token() }}",
                                 "_method": 'DELETE',
@@ -160,7 +160,7 @@
                             }),
                             success: function() {
                                 Swal.fire('Deleted!', 'Data berhasil dihapus','success');
-                                data_menu.ajax.reload(null, false);
+                                data_sales_activity.ajax.reload(null, false);
                             }
                         });
 

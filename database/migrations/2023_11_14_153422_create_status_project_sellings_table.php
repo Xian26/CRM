@@ -16,8 +16,8 @@ class CreateStatusProjectSellingsTable extends Migration
         Schema::create('status_project_sellings', function (Blueprint $table) {
             $table->id();
             $table->string('kode');
-            $table->string('name');
-            $table->string('status');
+            $table->string('nama');
+            $table->boolean('status');
             $table->timestamps();
         });
     }

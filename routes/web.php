@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\ResponController;
 use App\Http\Controllers\JobTitleController;
+use App\Http\Controllers\SalesActivityController;
+use App\Http\Controllers\StatusProjectSellingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,7 +49,21 @@ Route::get('/menu/edit/{id}', [MenuController::class, 'edit'])->name('menu.edit'
 Route::put('/menu/update/{id}', [MenuController::class, 'update'])->name('menu.update');
 Route::delete('/menu/delete', [MenuController::class, 'destroy'])->name('menu.delete');
 
+Route::get('/sales-activity', [SalesActivityController::class, 'index'])->name('sales-activity');
+Route::get('/sales-activity/getData', [SalesActivityController::class, 'getData'])->name('sales-activity.getData');
+Route::get('/sales-activity/add', [SalesActivityController::class, 'create'])->name('sales-activity.add');
+Route::post('/sales-activity/save', [SalesActivityController::class, 'store'])->name('sales-activity.save');
+Route::get('/sales-activity/edit/{id}', [SalesActivityController::class, 'edit'])->name('sales-activity.edit');
+Route::put('/sales-activity/update/{id}', [SalesActivityController::class, 'update'])->name('sales-activity.update');
+Route::delete('/sales-activity/delete', [SalesActivityController::class, 'destroy'])->name('sales-activity.delete');
 
+Route::get('/status-project-selling', [StatusProjectSellingController::class, 'index'])->name('status-project-selling');
+Route::get('/status-project-selling/getData', [StatusProjectSellingController::class, 'getData'])->name('status-project-selling.getData');
+Route::get('/status-project-selling/add', [StatusProjectSellingController::class, 'create'])->name('status-project-selling.add');
+Route::post('/status-project-selling/save', [StatusProjectSellingController::class, 'store'])->name('status-project-selling.save');
+Route::get('/status-project-selling/edit/{id}', [StatusProjectSellingController::class, 'edit'])->name('status-project-selling.edit');
+Route::put('/status-project-selling/update/{id}', [StatusProjectSellingController::class, 'update'])->name('status-project-selling.update');
+Route::delete('/status-project-selling/delete', [StatusProjectSellingController::class, 'destroy'])->name('status-project-selling.delete');
 Route::get('home', function () {
     return view('main');
 });
