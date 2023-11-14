@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSalesActivitiesTable extends Migration
+class CreateMenusTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateSalesActivitiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('sales_activities', function (Blueprint $table) {
+        Schema::create('menus', function (Blueprint $table) {
             $table->id();
             $table->string('kode');
-            $table->string('name');
-            $table->string('status');
+            $table->string('nama');
+            $table->boolean('status');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateSalesActivitiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sales_activities');
+        Schema::dropIfExists('menus');
     }
 }

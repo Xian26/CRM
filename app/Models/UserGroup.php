@@ -5,7 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class sales_activity extends Model
+class UserGroup extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['kode', 'nama', 'status'];
 }

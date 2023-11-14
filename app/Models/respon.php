@@ -5,7 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class respon extends Model
+class Respon extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['kode', 'nama', 'status'];
+
 }
