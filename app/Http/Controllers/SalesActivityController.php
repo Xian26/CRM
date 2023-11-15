@@ -17,6 +17,7 @@ class SalesActivityController extends Controller
 
         $dataSalesActivity = SalesActivity::select('*')->get();
     
+        
         return Datatables::of($dataSalesActivity)
         ->addColumn('action', function ($row) {
             $btn = "";
