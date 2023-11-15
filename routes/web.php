@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\ResponController;
 use App\Http\Controllers\JobTitleController;
+use App\Http\Controllers\DepartemenIdController;
 use App\Http\Controllers\SalesActivityController;
 use App\Http\Controllers\StatusProjectSellingController;
 
@@ -64,6 +65,14 @@ Route::post('/status-project-selling/save', [StatusProjectSellingController::cla
 Route::get('/status-project-selling/edit/{id}', [StatusProjectSellingController::class, 'edit'])->name('status-project-selling.edit');
 Route::put('/status-project-selling/update/{id}', [StatusProjectSellingController::class, 'update'])->name('status-project-selling.update');
 Route::delete('/status-project-selling/delete', [StatusProjectSellingController::class, 'destroy'])->name('status-project-selling.delete');
+
+Route::get('/departemen-id', [DepartemenIdController::class, 'index'])->name('departemen-id');
+Route::get('/departemen-id/getData', [DepartemenIdController::class, 'getData'])->name('departemen-id.getData');
+Route::get('/departemen-id/add', [DepartemenIdController::class, 'create'])->name('departemen-id.add');
+Route::post('/departemen-id/save', [DepartemenIdController::class, 'store'])->name('departemen-id.save');
+Route::get('/departemen-id/edit/{id}', [DepartemenIdController::class, 'edit'])->name('departemen-id.edit');
+Route::put('/departemen-id/update/{id}', [DepartemenIdController::class, 'update'])->name('departemen-id.update');
+Route::delete('/departemen-id/delete', [DepartemenIdController::class, 'destroy'])->name('departemen-id.delete');
 Route::get('home', function () {
     return view('main');
 });
