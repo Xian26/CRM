@@ -113,7 +113,26 @@
 
 @push('scripts')
     <script type="text/javascript">
-        $(document).ready(function() {
+       $(document).ready(function() {
+            $("#form_add").validate({
+                errorClass: "error",
+                rules: {
+                    kode: {
+                        required: true,
+                    },
+                    nama: {
+                        required: true,
+                    }
+                },
+                messages: {
+                    kode: {
+                        required: "Please enter your kode",
+                    },
+                    nama: {
+                        required: "Please enter your nama",
+                    }
+                }
+            })
 
         });
     </script>

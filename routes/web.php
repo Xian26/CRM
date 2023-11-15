@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\ResponController;
 use App\Http\Controllers\JobTitleController;
+use App\Http\Controllers\JabatanIdController;
 use App\Http\Controllers\DepartemenIdController;
 use App\Http\Controllers\SalesActivityController;
 use App\Http\Controllers\StatusProjectSellingController;
@@ -73,6 +74,15 @@ Route::post('/departemen-id/save', [DepartemenIdController::class, 'store'])->na
 Route::get('/departemen-id/edit/{id}', [DepartemenIdController::class, 'edit'])->name('departemen-id.edit');
 Route::put('/departemen-id/update/{id}', [DepartemenIdController::class, 'update'])->name('departemen-id.update');
 Route::delete('/departemen-id/delete', [DepartemenIdController::class, 'destroy'])->name('departemen-id.delete');
+
+Route::get('/jabatan-id', [JabatanIdController::class, 'index'])->name('jabatan-id');
+Route::get('/jabatan-id/getData', [JabatanIdController::class, 'getData'])->name('jabatan-id.getData');
+Route::get('/jabatan-id/add', [JabatanIdController::class, 'create'])->name('jabatan-id.add');
+Route::post('/jabatan-id/save', [JabatanIdController::class, 'store'])->name('jabatan-id.save');
+Route::get('/jabatan-id/edit/{id}', [JabatanIdController::class, 'edit'])->name('jabatan-id.edit');
+Route::put('/jabatan-id/update/{id}', [JabatanIdController::class, 'update'])->name('jabatan-id.update');
+Route::delete('/jabatan-id/delete', [JabatanIdController::class, 'destroy'])->name('jabatan-id.delete');
+
 Route::get('home', function () {
     return view('main');
 });
