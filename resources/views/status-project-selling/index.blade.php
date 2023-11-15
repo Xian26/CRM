@@ -160,7 +160,7 @@
                             }),
                             success: function() {
                                 Swal.fire('Deleted!', 'Data berhasil dihapus','success');
-                                data_status-project-selling.ajax.reload(null, false);
+                                data_status_project_selling.ajax.reload(null, false);
                             }
                         });
 
