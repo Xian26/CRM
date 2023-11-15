@@ -11,7 +11,7 @@
                     data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}"
                     class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
                     <!--begin::Title-->
-                    <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Respon</h1>
+                    <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Jabatan Id</h1>
                     <!--end::Title-->
                     <!--begin::Separator-->
                     <span class="h-20px border-gray-300 border-start mx-4"></span>
@@ -30,7 +30,7 @@
                         <!--end::Item-->
                         <!--begin::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="#" class="text-muted text-hover-primary">Respon</a>
+                            <a href="#" class="text-muted text-hover-primary">Jabatan Id</a>
                         </li>
                         <!--begin::Item-->
                         <li class="breadcrumb-item">
@@ -53,7 +53,7 @@
             <!--begin::Container-->
             <div id="kt_content_container" class="container-xxl">
                 <form id="form_add" class="form d-flex flex-column flex-lg-row"
-                    action="{{ route('respon.update', $data->id) }}" method="POST" enctype="multipart/form-data">
+                    action="{{ route('jabatan-id.update', $data->id) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <!--begin::Main column-->
@@ -61,7 +61,7 @@
                         <div class="card card-flush py-4">
                             <div class="card-header">
                                 <div class="card-title">
-                                    <h2>Respon</h2>
+                                    <h2>Jabatan Id</h2>
                                 </div>
                             </div>
                             <div class="card-body pt-0">
@@ -90,7 +90,7 @@
                         <!--end::General options-->
                         <div class="d-flex justify-content-end">
                             <!--begin::Button-->
-                            <a href="{{route('respon')}}" id="kt_ecommerce_add_product_cancel"
+                            <a href="{{route('jabatan-id')}}" id="kt_ecommerce_add_product_cancel"
                                 class="btn btn-light me-5">Cancel</a>
                             <!--end::Button-->
                             <!--begin::Button-->
