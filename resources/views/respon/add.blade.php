@@ -116,20 +116,22 @@
             $("#form_add").validate({
                 errorClass: "error",
                 rules: {
-                    required: true,
+                    kode: {
+                        required: true,
+                    },
+                    nama: {
+                        required: true,
+                    }
                 },
-                nama: {
-                    required: true,
+                messages: {
+                    kode: {
+                        required: "Please enter your kode",
+                    },
+                    nama: {
+                        required: "Please enter your nama",
+                    }
                 }
-            },
-            messages: {
-                kode: {
-                    required: "Please enter your kode",
-                },
-                nama: {
-                    required: "Please enter your nama",
-                },
-            });
+            })
 
         });
     </script>
