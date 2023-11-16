@@ -198,7 +198,6 @@
                         <a href="{{route('client')}}" class="menu-title">Client </a>
                     </span>
                 </div>
-
             </div>
         </div>
     </div>

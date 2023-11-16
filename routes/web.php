@@ -84,6 +84,8 @@ Route::get('/jabatan-id/edit/{id}', [JabatanIdController::class, 'edit'])->name(
 Route::put('/jabatan-id/update/{id}', [JabatanIdController::class, 'update'])->name('jabatan-id.update');
 Route::delete('/jabatan-id/delete', [JabatanIdController::class, 'destroy'])->name('jabatan-id.delete');
 
+<<<<<<< HEAD
+=======
 Route::get('/client', [ClientController::class, 'index'])->name('client');
 Route::get('/client/getData', [ClientController::class, 'getData'])->name('client.getData');
 Route::get('/client/add', [ClientController::class, 'create'])->name('client.add');
@@ -95,6 +97,7 @@ Route::delete('/client/delete', [ClientController::class, 'destroy'])->name('cli
 
     
 
+>>>>>>> 50b4d22828a0fa56a4c5a9f42b6ff8455da3471f
 Route::get('home', function () {
 
 return view('main');

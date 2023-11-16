@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class JabatanId extends Model
 {
     use HasFactory;
-    
     protected $fillable = ['kode', 'nama', 'status'];
 
 }

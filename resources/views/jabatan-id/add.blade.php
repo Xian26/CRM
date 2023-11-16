@@ -11,7 +11,11 @@
                     data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}"
                     class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
                     <!--begin::Title-->
+<<<<<<< HEAD
+                    <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">JabatanId</h1>
+=======
                     <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Jabatan Id</h1>
+>>>>>>> 50b4d22828a0fa56a4c5a9f42b6ff8455da3471f
                     <!--end::Title-->
                     <!--begin::Separator-->
                     <span class="h-20px border-gray-300 border-start mx-4"></span>
@@ -30,7 +34,11 @@
                         <!--end::Item-->
                         <!--begin::Item-->
                         <li class="breadcrumb-item text-muted">
+<<<<<<< HEAD
+                            <a href="#" class="text-muted text-hover-primary">JabatanId</a>
+=======
                             <a href="#" class="text-muted text-hover-primary">Jabatan Id</a>
+>>>>>>> 50b4d22828a0fa56a4c5a9f42b6ff8455da3471f
                         </li>
                         <!--begin::Item-->
                         <li class="breadcrumb-item">
