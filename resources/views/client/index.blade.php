@@ -5,7 +5,7 @@
         <div class="toolbar" id="kt_toolbar">
             <div id="kt_toolbar_container" class="container-fluid d-flex flex-stack">
                 <div data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}" class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
-                    <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Jabatan</h1>
+                    <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Client</h1>
                     <span class="h-20px border-gray-300 border-start mx-4"></span>
                     <ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 my-1">
                         <li class="breadcrumb-item text-muted">
@@ -14,7 +14,7 @@
                         <li class="breadcrumb-item">
                             <span class="bullet bg-gray-300 w-5px h-2px"></span>
                         </li>
-                        <li class="breadcrumb-item text-dark">Jabatan</li>
+                        <li class="breadcrumb-item text-dark">Client </li>
                     </ul>
                 </div>
             </div>
@@ -60,7 +60,7 @@
                         </div>
 
                         <div class="card-toolbar">
-                            <a href="{{ route('jabatan-id.add') }}" class="btn btn-sm btn-light-primary">
+                            <a href="{{ route('client.add') }}" class="btn btn-sm btn-light-primary">
                                 <span class="svg-icon svg-icon-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="none">
@@ -74,13 +74,13 @@
                         </div>
                     </div>
                     <div class="card-body pt-0">
-                        <table class="table align-middle table-row-dashed fs-6 gy-5" id="jabatan-id-table">
+                        <table class="table align-middle table-row-dashed fs-6 gy-5" id="client-table">
                             <thead>
                                 <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0">
                                     <th class="min-w-10px">No</th>
-                                    <th class="min-w-150px">Kode</th>
-                                    <th class="min-w-300px">Nama</th>
-                                    <th class="min-w-150px">Status</th>
+                                    <th class="min-w-150px">Nama</th>
+                                    <th class="min-w-300px">Email</th>
+                                    <th class="min-w-150px">No Telepon</th>
                                     <th class="min-w-50px">Aksi</th>
                                 </tr>
                             </thead>
@@ -101,11 +101,11 @@
                 $("div.alert").fadeOut(300, function(){ $(this).remove();});
             }, 5000);
 
-            var data_Jabatan_Id= $('#jabatan-id-table').DataTable({
+            var data_client = $('#client-table').DataTable({
                 processing: true,
                 serverSide: true,
                 ajax: {
-                    url: "{{ route('jabatan-id.getData') }}",
+                    url: "{{ route('client.getData') }}",
                     dataType: "JSON",
                     type: "GET",
                     data:function(d){
@@ -118,17 +118,9 @@
                             return meta.row + meta.settings._iDisplayStart + 1;
                         },
                     },
-                    { data: 'kode' },
-                    { data: 'nama' },
-                    {
-                        "render": function(data, type, row) {
-                            if(row.status == '1'){
-                                return 'Aktif'
-                            }else{
-                                return 'Tidak Aktif'
-                            }
-                        }
-                    },
+                    { data: 'name' },
+                    { data: 'email' },
+                    { data: 'no_telepon' },
                     { data: 'action', name: 'action', 'searchable': false},
                 ]
             });
@@ -151,7 +143,7 @@
                     if (result.isConfirmed) {
                         $.ajax({
                             type: "POST",
-                            url: "{{ route('jabatan-id.delete') }}",
+                            url: "{{ route('client.delete') }}",
                             data: ({
                                 "_token": "{{ csrf_token() }}",
                                 "_method": 'DELETE',
@@ -160,7 +152,7 @@
                             }),
                             success: function() {
                                 Swal.fire('Deleted!', 'Data berhasil dihapus','success');
-                                data_Jabatan_Id.ajax.reload(null, false);
+                                data_client.ajax.reload(null, false);
                             }
                         });
 

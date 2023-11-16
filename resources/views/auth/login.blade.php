@@ -56,10 +56,10 @@ License: For each use you must have a valid license purchased only from above li
 							</a>
 							<!--end::Logo-->
 							<!--begin::Title-->
-							<h1 class="fw-bolder fs-2qx pb-5 pb-md-10" style="color: #986923;">Welcome to Metronic</h1>
+							<h1 class="fw-bolder fs-2qx pb-5 pb-md-10" style="color: #986923;">Welcome to CRM</h1>
 							<!--end::Title-->
 							<!--begin::Description-->
-							<p class="fw-bold fs-2" style="color: #986923;">Discover Amazing Metronic
+							<p class="fw-bold fs-2" style="color: #986923;">Discover Amazing CRM
 							<br />with great build tools</p>
 							<!--end::Description-->
 						</div>
@@ -107,14 +107,16 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Label-->
 										<label class="form-label fw-bolder text-dark fs-6 mb-0">Password</label>
 										<!--end::Label-->
-										<!--begin::Link-->
-										<a href="../../demo1/dist/authentication/layouts/aside/password-reset.html" class="link-primary fs-6 fw-bolder">Forgot Password ?</a>
-										<!--end::Link-->
 									</div>
 									<!--end::Wrapper-->
 									<!--begin::Input-->
 									<input class="form-control form-control-lg form-control-solid" type="password" name="password" autocomplete="off" />
 									<!--end::Input-->
+								</div>
+								<div class="fv-row mb-10">
+									<!--begin::Link-->
+								<a href="../../demo1/dist/authentication/layouts/aside/password-reset.html" class="link-primary fs-6 fw-bolder">Forgot Password ?</a>
+										<!--end::Link-->
 								</div>
 								<!--end::Input group-->
 								<!--begin::Actions-->

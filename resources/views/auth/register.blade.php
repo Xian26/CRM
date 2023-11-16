@@ -56,10 +56,10 @@ License: For each use you must have a valid license purchased only from above li
 							</a>
 							<!--end::Logo-->
 							<!--begin::Title-->
-							<h1 class="fw-bolder fs-2qx pb-5 pb-md-10" style="color: #986923;">Welcome to Metronic</h1>
+							<h1 class="fw-bolder fs-2qx pb-5 pb-md-10" style="color: #986923;">Welcome to CRM</h1>
 							<!--end::Title-->
 							<!--begin::Description-->
-							<p class="fw-bold fs-2" style="color: #986923;">Discover Amazing Metronic
+							<p class="fw-bold fs-2" style="color: #986923;">Discover Amazing CRM
 							<br />with great build tools</p>
 							<!--end::Description-->
 						</div>
@@ -154,15 +154,6 @@ License: For each use you must have a valid license purchased only from above li
 								</div>
 								<!--end::Input group-->
 								<!--begin::Input group-->
-								<div class="fv-row mb-10">
-									<label class="form-check form-check-custom form-check-solid form-check-inline">
-										<input class="form-check-input" type="checkbox" name="toc" value="1" />
-										<span class="form-check-label fw-bold text-gray-700 fs-6">I Agree
-										<a href="#" class="ms-1 link-primary">Terms and conditions</a>.</span>
-									</label>
-								</div>
-								<!--end::Input group-->
-								<!--begin::Actions-->
 								<div class="text-center">
 									<button type="button" id="kt_sign_up_submit" class="btn btn-lg btn-primary">
 										<span class="indicator-label">Submit</span>
