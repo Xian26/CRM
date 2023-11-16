@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ResponController;
 use App\Http\Controllers\JobTitleController;
 use App\Http\Controllers\JabatanIdController;
@@ -82,6 +83,16 @@ Route::post('/jabatan-id/save', [JabatanIdController::class, 'store'])->name('ja
 Route::get('/jabatan-id/edit/{id}', [JabatanIdController::class, 'edit'])->name('jabatan-id.edit');
 Route::put('/jabatan-id/update/{id}', [JabatanIdController::class, 'update'])->name('jabatan-id.update');
 Route::delete('/jabatan-id/delete', [JabatanIdController::class, 'destroy'])->name('jabatan-id.delete');
+
+Route::get('/client', [ClientController::class, 'index'])->name('client');
+Route::get('/client/getData', [ClientController::class, 'getData'])->name('client.getData');
+Route::get('/client/add', [ClientController::class, 'create'])->name('client.add');
+Route::post('/client/save', [ClientController::class, 'store'])->name('client.save');
+Route::get('/client/edit/{id}', [ClientController::class, 'edit'])->name('client.edit');
+Route::get('/client/detail/{id}', [ClientController::class, 'show'])->name('client.detail');
+Route::put('/client/update/{id}', [ClientController::class, 'update'])->name('client.update');
+Route::delete('/client/delete', [ClientController::class, 'destroy'])->name('client.delete');
+
     
 
 Route::get('home', function () {

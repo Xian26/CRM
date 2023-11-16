@@ -3,7 +3,7 @@
     data-kt-drawer-width="{default:'200px', '300px': '250px'}" data-kt-drawer-direction="start"
     data-kt-drawer-toggle="#kt_aside_mobile_toggle">
     <div class="aside-logo flex-column-auto" id="kt_aside_logo">
-            <img alt="Logo" src="{{ asset('dist/assets/media/logos/logodiantara.png')}}" class="h-80px logo" />
+            <img alt="Logo" src="{{asset('dist/assets/media/logos/logodiantara.png')}}" class="h-80px logo" />
         <div id="kt_aside_toggle" class="btn btn-icon w-auto px-0 btn-active-color-primary aside-toggle"
             data-kt-toggle="true" data-kt-toggle-state="active" data-kt-toggle-target="body"
             data-kt-toggle-name="aside-minimize">
@@ -158,7 +158,7 @@
                                 </svg>
                             </span>
                         </span>
-                        <a href="{{route('departemen-id')}}" class="menu-title">Departemen Id</a>
+                        <a href="{{route('departemen-id')}}" class="menu-title">Departemen </a>
                     </span>
                 </div>
 
@@ -177,7 +177,7 @@
                                 </svg>
                             </span>
                         </span>
-                        <a href="{{route('jabatan-id')}}" class="menu-title">Jabatan Id</a>
+                        <a href="{{route('jabatan-id')}}" class="menu-title">Jabatan </a>
                     </span>
                 </div>
             </div>
